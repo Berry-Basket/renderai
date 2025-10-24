@@ -69,9 +69,9 @@ export default function WaitlistPage() {
         {/* Hero Section */}
         <div className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
           
-          {/* Left Content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
+          {/* Left Content - with more spacing and lighter feel */}
+          <div className="space-y-8 pl-8 md:pl-12">
+            <div className="space-y-4 opacity-95">
               <h1 className="text-5xl md:text-6xl font-bold leading-tight">
                 AI-Powered Rendering for Architects
               </h1>
@@ -126,81 +126,12 @@ export default function WaitlistPage() {
             )}
           </div>
 
-          {/* Right Visual - Architectural Rendering */}
+          {/* Right Visual - White Placeholder */}
           <div className="relative h-96 md:h-full min-h-96">
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent rounded-2xl border border-orange-500/20 overflow-hidden flex items-center justify-center">
-              <svg className="w-full h-full" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#1e293b" stopOpacity="1" />
-                    <stop offset="100%" stopColor="#0f172a" stopOpacity="1" />
-                  </linearGradient>
-                  <linearGradient id="buildingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#f97316" stopOpacity="0.8" />
-                    <stop offset="100%" stopColor="#ea580c" stopOpacity="0.6" />
-                  </linearGradient>
-                </defs>
-                
-                {/* Background */}
-                <rect width="400" height="500" fill="url(#bgGradient)" />
-                
-                {/* Sky gradient */}
-                <rect width="400" height="250" fill="#1e1b4b" />
-                
-                {/* Main building structure */}
-                <rect x="80" y="180" width="240" height="270" fill="url(#buildingGradient)" rx="8" />
-                
-                {/* Building left accent */}
-                <rect x="60" y="200" width="20" height="240" fill="#f97316" opacity="0.4" />
-                
-                {/* Building right accent */}
-                <rect x="320" y="200" width="20" height="240" fill="#f97316" opacity="0.4" />
-                
-                {/* Windows - organized grid */}
-                {Array.from({ length: 6 }).map((_, row) =>
-                  Array.from({ length: 5 }).map((_, col) => (
-                    <g key={`window-${row}-${col}`}>
-                      <rect
-                        x={100 + col * 42}
-                        y={200 + row * 38}
-                        width="32"
-                        height="28"
-                        fill="#fbbf24"
-                        opacity="0.6"
-                      />
-                      <rect
-                        x={100 + col * 42}
-                        y={200 + row * 38}
-                        width="32"
-                        height="28"
-                        fill="none"
-                        stroke="#f97316"
-                        strokeWidth="1"
-                        opacity="0.4"
-                      />
-                    </g>
-                  ))
-                )}
-                
-                {/* Glass reflection highlight */}
-                <rect x="80" y="180" width="240" height="70" fill="#ffffff" opacity="0.08" />
-                
-                {/* Ground/Base */}
-                <rect y="450" width="400" height="50" fill="#0f172a" />
-                
-                {/* Ground platform */}
-                <rect x="30" y="445" width="340" height="8" fill="#f97316" opacity="0.3" />
-                
-                {/* Accent lines */}
-                <line x1="50" y1="160" x2="350" y2="160" stroke="#f97316" strokeWidth="2" opacity="0.2" />
-                
-                {/* Decorative architectural elements */}
-                <circle cx="80" cy="100" r="35" fill="#f97316" opacity="0.08" />
-                <circle cx="320" cy="130" r="45" fill="#f97316" opacity="0.06" />
-                
-                {/* Building top detail */}
-                <polygon points="80,180 200,140 320,180" fill="#f97316" opacity="0.3" />
-              </svg>
+            <div className="absolute inset-0 bg-white rounded-2xl border-2 border-slate-200 shadow-lg flex items-center justify-center">
+              <p className="text-slate-400 text-center px-6">
+                Your architectural render will appear here
+              </p>
             </div>
           </div>
         </div>
