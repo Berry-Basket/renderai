@@ -86,7 +86,7 @@ export default function WaitlistPage() {
                 <Check className="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" />
                 <div>
                   <p className="font-semibold">Professional Presets</p>
-                  <p className="text-sm text-slate-400">Architect-designed prompts for consistent results</p>
+                  <p className="text-base text-slate-400">Architect-designed prompts for consistent results</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -126,15 +126,16 @@ export default function WaitlistPage() {
             )}
           </div>
 
-          {/* Right Visual - White Placeholder */}
-          <div className="relative h-96 md:h-full min-h-96">
-            <div className="absolute inset-0 bg-white rounded-2xl border-2 border-slate-200 shadow-lg flex items-center justify-center">
-              <p className="text-slate-400 text-center px-6">
-                Your architectural render will appear here
-              </p>
-            </div>
-          </div>
-        </div>
+          {/* Right Visual - Image */}
+<div className="relative h-96 md:h-full min-h-96">
+  <div className="absolute inset-0 rounded-2xl border-2 border-slate-200 shadow-lg overflow-hidden">
+    <img 
+      src="/8065902_52.jpg" 
+      alt="Architectural rendering"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</div>
 
         {/* Form Section */}
         <div id="form-section" className="bg-gradient-to-b from-transparent via-orange-500/5 to-transparent py-20">
