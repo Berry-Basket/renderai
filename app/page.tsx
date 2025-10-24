@@ -127,15 +127,20 @@ export default function WaitlistPage() {
           </div>
 
           {/* Right Visual - Image */}
-<div className="relative h-96 md:h-full min-h-96">
-  <div className="absolute inset-0 rounded-2xl border-2 border-slate-200 shadow-lg overflow-hidden">
-    <img 
-      src="/8065902_52.jpg" 
-      alt="Architectural rendering"
-      className="w-full h-full object-cover"
-    />
-  </div>
-</div>
+          <div className="relative h-96 md:h-full min-h-96">
+            <div className="absolute inset-0 rounded-2xl border-2 border-slate-200 shadow-lg overflow-hidden">
+              <img 
+                src="/8065902_52.jpg" 
+                alt="Architectural rendering"
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = "/globe.svg";
+                }}
+              />
+            </div>
+          </div>
+        </div>
 
         {/* Form Section */}
         <div id="form-section" className="bg-gradient-to-b from-transparent via-orange-500/5 to-transparent py-20">
